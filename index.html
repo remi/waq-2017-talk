@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Développement d’applications JavaScript — Passé, présent et futur</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="animate.css">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/png">
+  </head>
+  <body>
+    <script src="./remark.js"></script>
+    <script>
+      window.fetch('./SOURCE.md').then((response) => response.text()).then((source) => {
+        const slideNumberFormat = '';
+        const highlightStyle = 'github';
+        const navigation = {scroll: false};
+        const ratio = '16:9';
+
+        remark.create({ratio, source, slideNumberFormat, highlightStyle, navigation});
+      });
+    </script>
+  </body>
+</html>
